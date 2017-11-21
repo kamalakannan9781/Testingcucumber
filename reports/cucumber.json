@@ -1,0 +1,82 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Buy last coffee",
+        "description": "",
+        "id": "serve-coffee;buy-last-coffee",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 158141850,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "there are 1 coffees left in the machine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 10
+                }
+              ],
+              "location": "filesteps.there_are_coffees_left_in_the_machine(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 143295,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I have deposited 1$",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 17
+                }
+              ],
+              "location": "filesteps.i_have_deposited_$(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76581,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I press the coffee button",
+            "match": {
+              "location": "filesteps.i_press_the_coffee_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 66318,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I should be served a coffee",
+            "match": {
+              "location": "filesteps.i_should_be_served_a_coffee()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Serve coffee",
+    "description": "  Coffee should not be served until paid for\r\n  Coffee should not be served until the button has been pressed\r\n  If there is no coffee left then money should be refunded",
+    "id": "serve-coffee",
+    "keyword": "Feature",
+    "uri": "Gmail.feature"
+  }
+]

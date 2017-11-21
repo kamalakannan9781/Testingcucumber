@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>JavaScript Training</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            .sidebar-nav li .active {
+                color:#C00;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        JavaScript Training
+                    </a>
+                </li>
+                <li>
+                    <a href="#introduction">Introduction</a>
+                </li>
+                <li>
+                    <a href="#technical">Technical Introduction</a>
+                </li>
+                <li>
+                    <a href="#usage">How to include JS files?</a>
+                </li>
+                <li>
+                    <a href="#prerequisites">Prerequisites</a>
+                </li>
+                <li>
+                    <a href="#helloWorld">Simple Hello World!</a>
+                </li>
+                <li>
+                    <a href="#dom">DOM</a>
+                </li>
+                <li>
+                    <a href="#variables">Variables</a>
+                </li>
+                <li>
+                    <a href="#datatypes">Data types</a>
+                </li>
+                <li>
+                    <a href="#operators">Operators</a>
+                </li>
+                <li>
+                    <a href="#conditions">Conditional Statements</a>
+                </li>
+                <li>
+                    <a href="#loops">Loops</a>
+                </li>
+                <li>
+                    <a href="#scope">Scope</a>
+                </li>
+                <li>
+                    <a href="#functions">Functions</a>
+                </li>
+                <li>
+                    <a href="#events">Events and Handlers</a>
+                </li>
+                <li>
+                    <a href="#oojs">OOJS (Object Oriented JavaScript)</a>
+                </li>
+                <li>
+                    <a href="#namespace">Namespace</a>
+                </li>
+                <li>
+                    <a href="#patterns">Patterns</a>
+                </li>
+                <li>
+                    <a href="#ajax">AJAX</a>
+                </li>
+                <li>
+                    <a href="#references">References</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 chapter" id="introduction">
+                        <h3>Introduction</h3>
+                        <ul>
+                            <li><a href="http://www.jeanhelfenstein.com/" target="_blank">Simple Demo</a></li>
+                        	<li>Created by <b>Brendan Eich in 1995</b>, an NetScape Engineer originally called as <b>LiveScript</b>.</li>
+                        	<li>Netscape submitted Javascript to <b>ECMA International</b> and relased the version <b>ECMA3</b>.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 chapter" id="technical">
+                        <h3>Technical Introduction</h3>
+                        <ul>
+                        	<li>Client side scripting language</li>
+                        	<li>The World's Most Misunderstood Programming Language</li>
+                        	<li>Syntax looks like <b>C and Java</b></li>
+                        </ul>
+                        <h4>How it differs from Other programming languages?</h4>
+                        <ul>
+                            <li>Loosely typed language</li>
+                        	<li>It has objects which can contain data and methods that act upon that data.</li>
+                        	<li>Objects can contain other objects.</li>
+                        	<li>It does not have classes, but it does have constructors.</li>
+                        	<li>It does not have class-oriented inheritance, but it does have prototype-oriented inheritance</li>
+                        	<li>JavaScript objects can have private variables and private methods.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 chapter" id="usage">
+                        <h3>How to include JS files?</h3>
+                        <ul>
+                        	<li>JavaScript programs should be stored as <b>.js</b> files.</li>
+                        	<li>JavaScript code should not be embedded in HTML files unless the code is specific to a single session. <b>Page level JS code blocks can not be cached or compressed </b>.</li>
+                        	<li><b>&lt;script src=filename.js&gt; tags should be placed as late in the body as possible. <b>This reduces the effects of delays imposed by script loading on other page components.</b></li>
+                        	<li>There is no need to use the language or type attributes.</b> It is the server, not the script tag, that determines the MIME type.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 chapter" id="prerequisites">
+                        <h3>Prerequisites</h3>
+                        <ul>
+                        	<li>Editor: <b>Text Editor, Notepad, Notepad++, Sublime text Editor, WebStorm, Eclipse...</b></li>
+                        	<li>Browsers: <b>Chrome, Firefox, IE, Safari...</b>.</li>
+                        	<li><b>Unlearn all your programming knowledge</b></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 chapter" id="helloWorld">
+                        <h3>Simple Hello World Program</h3>
+                        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Hello World Program&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;
+
+		&lt;/div&gt;
+	    &lt;script&gt;
+			var containerObj = document.getElementById("container");
+			containerObj.innerHTML = "Hello World!";
+	    &lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+	                    </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="dom">
+                        <h3>DOM</h3>
+                        <ul>
+                            <li>The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.</li>
+                            <li>The HTML elements as <b>objects</b></li>
+                            <li>The <b>properties</b> of all HTML elements</li>
+                            <li>The <b>methods</b> to access all HTML elements</li>
+                            <li>The <b>events</b> for all HTML elements</li>
+                        </ul>
+                        <h4>Power of JS over DOM</h4>
+                        <ul>
+                            <li>JavaScript can change all the HTML elements in the page</li>
+                            <li>JavaScript can change all the HTML attributes in the page</li>
+                            <li>JavaScript can change all the CSS styles in the page</li>
+                            <li>JavaScript can remove existing HTML elements and attributes</li>
+                            <li>JavaScript can add new HTML elements and attributes</li>
+                            <li>JavaScript can react to all existing HTML events in the page</li>
+                            <li>JavaScript can create new HTML events in the page</li>
+                        </ul>
+                        <h4>Difference between "window" and "document" objects</h4>
+                        <ul>
+                            <li>Both <b>window</b> and <b>document</b> are built-in DOM objects.</li>
+                            <li><b>window</b> is a parent object of all DOM objects (returns the properties and methods of a browser window)</li>
+                            <li><b>document</b> is a child object of <b>window</b>  (returns the properties and methods document)
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 chapter" id="events">
+                        <h3>Events</h3>
+                        <ul>
+                            <li>JavaScript lets you execute code when events are detected.</li>
+                        </ul>
+                        <h4>Handlers - Using HTML Attribute</h4>
+                        <pre>
+&lt;button onclick="alert('Hi! Button clicked');"&gt;Click Me&lt;/button&gt;
+                        </pre>
+                        <p>
+                            <button onclick="alert('Hi! Button clicked');">Click Me</button>
+                        </p>
+                        <h4>Handlers - Using JavaScript</h4>
+                        <pre>
+&lt;script&gt;
+document.getElementById("clickMe").onclick = function () {
+  alert("Click Event is handled via JavaScript");
+};
+&lt;/script&gt;
+&lt;button id="clickMe"&gt;Click Me&lt;/button&gt;
+
+                        </pre>
+                        <p>
+                            <button id="clickMe">Click Me</button>
+                        </p>
+                        <h4>Handlers - Another way using JavaScript</h4>
+                        <pre>
+&lt;script&gt;
+function handleClick () {
+    alert("I am clicked now");
+}
+document.getElementById("clickMeBtn").addEventListener("click", handleClick, false);
+&lt;/script&gt;
+&lt;button id="clickMeBtn"&gt;Click Me&lt;/button&gt;
+
+                        </pre>
+                        <p>
+                            <button id="clickMeBtn">Click Me</button>
+                        </p>
+
+                    </div>
+                    <div class="col-lg-12 chapter" id="variables">
+                        <h3>Variables</h3>
+                        <ul>
+                          <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+                          <li>Names must begin with a letter</li>
+                          <li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+                          <li>Names are case sensitive (y and Y are different variables)</li>
+                          <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+                        </ul>
+                        <h4>Example</h4>
+                        <pre>
+            // Data types
+            var empTIN = 10; // Number
+            var employerName = "Altimetrik"; // String
+            var isAnMNC = true; // Boolean
+                        </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="datatypes">
+                        <h3>Data Types</h3>
+                        <ul>
+                            <li><code>Number</code></li>
+                            <li><code>String</code></li>
+                            <li><code>Boolean</code></li>
+                            <li><code>Symbol</code> (new in Edition 6)</li>
+                            <li><code>Object</code>
+                                <ul>
+                                    <li><code>Function</code></li>
+                                    <li><code>Array</code></li>
+                                    <li><code>Date</code></li>
+                                    <li><code>RegExp</code></li>
+                                </ul>
+                            </li>
+                            <li><code>null</code></li>
+                            <li><code>undefined</code></li>
+                        </ul>
+                        <h4>Important Points</h4>
+                        <ul>
+                            <li><b>typeof</b> method is used to get the data type of the object.</li>
+                            <li>Difference between <b>null (DataType: Object)</b> and <b>undefined (DataType: undefined)</b>
+                        </ul>
+                        <h4>NaN property</h4>
+                        <ul>
+                            <li><b>The NaN property represents "Not-a-Number" value.</b> (Ex: divide a number by zero)</li>
+                            <li><b>NaN variable will not equal to another NaN variable</b></li>
+                        </ul>
+                        <h4>Truthy and Falsy values</h4>
+                        <p>The below values will always return <b>false</b></p>
+                        <ul>
+                            <li><strong>false</strong></li>
+                            <li><strong>0</strong> (zero)</li>
+                            <li><strong>""</strong> (empty string)</li>
+                            <li><strong>null</strong></li>
+                            <li><strong>undefined</strong></li>
+                            <li><strong>NaN</strong> (a special Number value meaning Not-a-Number!)</li>
+                        </ul>
+                        <h4>Double Negation</h4>
+                        <ul>
+                            <li>Will be helpful to return <b>boolean</b> value.</li>
+                            <li><strong>!!</strong> var a = !!(0); // variable is set to false</li>
+                        </ul>
+                        <h4>Example of Data types</h4>
+                        <pre>
+            // Data types
+            var empTIN = 10; // Number
+            var employerName = "Altimetrik"; // String
+            var isAnMNC = true; // Boolean
+            var branches = ["Chennai", "Bangalore"]; // Array
+            //Object
+            var employee = {
+                "name": "Anamika",
+                "empId": 1000
+            }
+            // How to access properties in an object
+            console.log(employee.name);
+
+            //How to get the Data types
+            console.log(typeof(employee));
+
+            var undefinedVar;
+            console.log(undefinedVar); //shows undefined
+            console.log(typeof undefinedVar); //shows undefined
+
+            var nullVar = null;
+            console.log(nullVar); //shows null
+            console.log(typeof nullVar); //shows object
+                        </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="operators">
+                        <h3>Arithmetic Operators</h3>
+                        <ul>
+                            <li><code>+</code> Addition (on Numbers) OR Conatenation (on Strings)</li>
+                            <li><code>-</code> Subtraction</li>
+                            <li><code>*</code> Multiplication</li>
+                            <li><code>/</code> Division</li>
+                            <li><code>%</code> Modulus</li>
+                            <li><code>++</code> Increment</li>
+                            <li><code>--</code> Decrement</li>
+                        </ul>
+                        <h3>Assignment Operators</h3>
+                        <ul>
+                            <li><code>=</code> x = y</li>
+                            <li><code>+=</code> a += b (a = a + b)</li>
+                            <li><code>-=</code> a -= b (a = a - b)</li>
+                            <li><code>*=</code> a *= b (a = a * b)</li>
+                            <li><code>/=</code> a /= b (a = a / b)</li>
+                            <li><code>%=</code> a %= b (a = a % b)</li>
+                        </ul>
+                        <h3>Comparision Operators</h3>
+                        <ul>
+                            <li><code>==</code> equal to</li>
+                            <li><code>===</code> Strictly equal to (equal value and equal type)</li>
+                            <li><code>!=</code> not equal</li>
+                            <li><code>!==</code> not equal value or not equal type</li>
+                            <li><code>&gt;</code> greater than</li>
+                            <li><code>&lt;</code> less than</li>
+                            <li><code>&gt;=</code> greater than or equal to</li>
+                            <li><code>&lt;</code> less than or equal to</li>
+                       </ul>
+                    </div>
+                    <div class="col-lg-12 chapter" id="conditions">
+                        <h3>Conditional Statements</h3>
+                        <ul>
+                            <li><code>if (condition) { } else if (condition) { } else { }</code></li>
+                            <li><code>var result = (condition) ? true statement : false statement;</code></li>
+                            <li><code>switch(expression) {case n : statements; break; default: default statements;}</code></li>
+                        </ul>
+                        <h4>Example</h4>
+                        <pre>
+// If condition example                            
+if (time < 10) {
+    greeting = "Good morning";
+} else if (time < 20) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+console.log(greeting);
+
+// Ternary Operator
+var isJSEasyToLearn = true;
+var rockYourself = (isJSEasyToLearn) ? "Yeah!" : "Ooops!";
+console.log(rockYourself) ;
+
+// Switch... Case
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+        break;
+}
+// While loop
+var text = "";
+while (i < 10) {
+    text += "The number is " + i;
+    i++;
+}
+// do...while loop
+var text = "";
+do {
+    text += "The number is " + i;
+    i++;
+}
+while (i < 10);
+                        </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="loops">
+                        <h3>Looping</h3>
+                        <ul>
+                            <li><b>for </b>- loops through a block of code a number of times</li>
+                            <li><b><strong>for/in</strong> </b>- loops through the properties of an object</li>
+                            <li><b>while </b>- loops through a block of code while a specified condition is true</li>
+                            <li><strong>do/while</strong> - also loops through a block of code while a specified condition is true. <b>Irrespective of the condition, it will execute the loop atleast once.</b></li>
+                        </ul>
+                        <h4>Example</h4>
+                        <pre>
+// For loop
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+// For in
+var person = {
+    fname:"John", 
+    lname:"Doe", 
+    age:25
+}; 
+
+var text = "";
+for (var key in person) {
+    text += person[key];
+}
+console.log(text);
+                        </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="scope">
+                        <h3>Scope</h3>
+                        <ul>
+                            <li>Defines the lifetime of the variable</li>
+                        </ul>
+<ol>
+<li><p><strong>A globally-scoped variable</strong></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="com">// global scope</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> one</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  alert</span><span class="pun">(</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre></li>
+<li><p><strong>Local scope</strong></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> two</span><span class="pun">(</span><span class="pln">a</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  alert</span><span class="pun">(</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">// local scope again</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> three</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3</span><span class="pun">;</span><span class="pln">
+  alert</span><span class="pun">(</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre></li>
+<li><p><strong>Intermediate</strong>: <em>No such thing as block scope in JavaScript</em> (ES5; ES6 introduces <code>let</code>)</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> four</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  alert</span><span class="pun">(</span><span class="pln">a</span><span class="pun">);</span><span class="pln"> </span><span class="com">// alerts '4', not the global value of '1'</span><span class="pln">
+</span><span class="pun">}</span></code></pre></li>
+<li><p><strong>Intermediate</strong>: <em>Object properties</em></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> five</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre></li>
+<li><p><strong>Advanced</strong>: <em>Closure</em></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">var</span><span class="pln"> six </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">6</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// JavaScript "closure" means I have access to 'a' in here,</span><span class="pln">
+    </span><span class="com">// because it is defined in the function in which I was defined.</span><span class="pln">
+    alert</span><span class="pun">(</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">};</span><span class="pln">
+</span><span class="pun">})();</span></code></pre></li>
+<!-- <li><p><strong>Advanced</strong>: <em>Prototype-based scope resolution</em></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> seven</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">7</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">// [object].prototype.property loses to</span><span class="pln">
+</span><span class="com">// [object].property in the lookup chain. For example...</span><span class="pln">
+
+</span><span class="com">// Won't get reached, because 'a' is set in the constructor above.</span><span class="pln">
+seven</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.</span><span class="pln">a </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="com">// Will get reached, even though 'b' is NOT set in the constructor.</span><span class="pln">
+seven</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.</span><span class="pln">b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">8</span><span class="pun">;</span></code></pre></li>
+<li><p><strong>Altogether</strong></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="com">// These will print 1-8</span><span class="pln">
+one</span><span class="pun">();</span><span class="pln">
+two</span><span class="pun">(</span><span class="lit">2</span><span class="pun">);</span><span class="pln">
+three</span><span class="pun">();</span><span class="pln">
+four</span><span class="pun">();</span><span class="pln">
+alert</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> five</span><span class="pun">().</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+six</span><span class="pun">();</span><span class="pln">
+alert</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> seven</span><span class="pun">().</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+alert</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> seven</span><span class="pun">().</span><span class="pln">b</span><span class="pun">);</span></code></pre>
+
+<hr></li>
+<li><p><strong>Global+Local</strong>: <em>An extra complex Case</em></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+
+</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">x</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">;</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">x</span><span class="pun">);</span><span class="pln"> 
+</span><span class="pun">})();</span></code></pre>
+
+<p>This will print out <code>undefined</code> and <code>10</code> rather than <code>5</code> and <code>10</code> since JavaScript always moves variable declarations (not initializations) to the top of the scope, making the code equivalent to:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+
+</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> x</span><span class="pun">;</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">x</span><span class="pun">);</span><span class="pln">
+    x </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">;</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">x</span><span class="pun">);</span><span class="pln"> 
+</span><span class="pun">})();</span></code></pre></li>
+<li><p><strong>Catch clause-scoped variable</strong></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> e </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">e</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">throw</span><span class="pln"> </span><span class="lit">6</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">e</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">e</span><span class="pun">);</span></code></pre>
+
+<p>This will print out <code>5</code>, <code>6</code>, <code>5</code>. Inside the catch clause <code>e</code> shadows global and local variables. But this special scope is only for the caught variable. If you write <code>var f;</code> inside the catch clause, then it's exactly the same as if you had defined it before or after the try-catch block.</p></li>
+ --></ol>
+                    </div>
+                    <div class="col-lg-12 chapter" id="functions">
+                        <h3>Functions</h3>
+                        <ul>
+                            <li>You can reuse code: Define the code once, and use it many times.</li>
+                            <li>You can use the same code many times with different arguments, to produce different results.</li>
+                        </ul>
+                        <h4>Example - Function</h4>
+                        <pre>
+// Function declaration
+function myFunction(a, b) {
+    return a * b;                
+}
+// Function invoking
+var x = myFunction(4, 3);        
+                        </pre>
+                        <h4>Example - Anonymous Function</h4>
+                        <pre>
+var a = 10;                            
+var squareOfANumber = function () {
+    return a*a;
+};
+squareOfANumber();
+                        </pre>
+                        <h4>Example - Immediately invocating named Function (Recursive Function)</h4>
+                        <pre>
+// returns the factorial of 10.
+console.log((function factorial(n) {
+  return (n <= 1)
+  ? 1
+  : factorial(n - 1) * n;
+})(5));
+                        </pre>
+                        <h4>Example - Immediately Invocating Anonymous Function</h4>
+                        <pre>
+var a = 10;
+(function () {
+console.log(a*a);
+})();
+                        </pre>
+                        <h4>Example - Immediately Invocating Anonymous Function with Arguments</h4>
+                        <pre>
+// Method 1                            
+(function (a) {
+console.log(a*a);
+})(10);
+
+// Method 2
+(function (a) {
+console.log(a*a);
+}(10));
+                        </pre>
+                        <h4>Example - Callback function <input type="button" id="test" value="Click Me" /></h4>
+                        <ul>
+                            <li>Will be executed only when the particular event is happening</li>
+                            <li>It will not <b>block</b> further execution of the Code</li>
+                        </ul>
+                        <pre>
+// Method 1                            
+var buttonObj = document.getElementById('test');
+buttonObj.onclick = function () {
+    alert("Hi Folks! You clicked me!");
+};
+alert("Look at me! I am not blocked by the previous call back function!");
+
+// Method 2
+var buttonObj = document.getElementById('test');
+function printMessage() {
+    alert("Hi Folks! You clicked me!");
+}
+buttonObj.onclick = printMessage;
+                        </pre>
+                        <h4>Example - Accessing as a Method</h4>
+                        <pre>
+var Person = {
+    sayHello: function() {
+        console.log('Hello World');
+    }
+};                        
+Person.sayHello();
+                        </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="oojs">
+                        <h3>Object Oriented Java Script</h3>
+                        <ul class="list">
+                            <li><p><b>Encapsulation</b> − the capability to store related information, whether data or methods, together in an object.</p></li>
+                            <li><p><b>Aggregation</b> − the capability to store one object inside another object.</p></li>
+                            <li><p><b>Inheritance</b> − the capability of a class to rely upon another class (or number of classes) for some of its properties and methods.</p></li>
+                            <li><p><b>Polymorphism</b> − the capability to write one function or method that works in a variety of different ways.</p></li>
+                        </ul>
+                        <h4>Properties and Methods</h4>
+                        <pre>
+var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue",
+    getAge: function () {
+        console.log(this.age);
+    }
+};
+person.getAge();
+                        </pre>
+                        <h4>Object Augmentation</h4>
+                        <p>Declaring empty object and adding it later</p>
+                        <pre>
+var person = {};
+person.age = 50;
+person.getAge = function () {
+    console.log(this.age);
+};
+person.getAge();
+                        </pre>
+                        <h4>Object Instantiation</h4>
+                        <p>Using new keyword</p>
+                        <pre>
+function getPersonDetails() {
+    this.age = 10;
+    this.getAge = function() {
+        console.log(this.age);
+    };
+}
+var per = new getPersonDetails();
+per.getAge();
+                        </pre>
+                        <h4>Private variables</h4>
+                        <p>Declared using var.</p>
+                        <pre>
+function getPersonDetails() {
+    var age = 10;
+    this.getAge = function() {
+        console.log(age);
+    };
+}
+var per = new getPersonDetails();
+per.getAge();
+                        </pre>
+                        <h4>Prototypal Inheritence</h4>
+                        <pre>
+function Animal() {
+    this.legs = 4;
+}
+
+function Rabbit(name) {
+    this.name = name;
+}
+
+Rabbit.prototype = new Animal();
+var rabObj = new Rabbit();
+rabObj.legs;
+                        </pre>
+                        <h4>Absraction</h4>
+                        <p>Absraction is the process hiding all but the relevant data about an object in order to reduce complexity and increase efficiency.</p>
+                        <pre>
+var parent = function() {
+    var privateVarA = 10;
+    var secretMethod = function (inputNum) {
+        var product = inputNum * privateVarA;
+        return product;
+    };
+    return {
+        publicVarA: privateVarA,
+        publicMethod: secretMethod
+    };
+};
+
+var par = new parent();
+par.publicMethod(2);
+                        </pre>
+                        <h4>Polymorphism</h4>
+                        <p>Ability to process objects differently depending on their data type or class.</p>
+                        <pre>
+function Animal() {
+    var legs = 4;
+    this.getLegs = function () {
+        return legs;
+    };
+}
+
+function Insect() {
+    var legs = 8;
+    this.getLegs = function () {
+        return legs;
+    };
+}
+
+Insect.prototype = new Animal();
+var animalObj = new Animal();
+var insectObj = new Insect();
+animalObj.getLegs();
+insectObj.getLegs();
+                        </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="namespace">
+                        <h3>Namespace</h3>
+                        <p>Can have modularity as well as can have same properties and methods. The below example is following linear pattern.</p>
+                        <pre>
+var creatures = {};
+creatures.birds = {
+    canSing: true
+};
+creatures.animals = {
+    canSing: false
+};
+creatures.birds.canSing;
+creatures.animals.canSing;
+                        </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="patterns">
+                        <h3>Patterns</h3>
+                        <ul>
+                            <li>to write maintainable, readable, and reusable code.</li>
+                            <li>Code structuring becomes more important as applications become larger</li>
+                        </ul>
+                        <h4>Module Patterns</h4>
+                        <ul>
+                            <li>Modules should be Immediately-Invoked-Function-Expressions (IIFE) to allow for private scopes</li>
+                        </ul>
+                        <pre>
+(function() {
+
+    // declare private variables and/or functions
+
+    return {
+      // declare public variables and/or functions
+    }
+
+})();
+                        </pre>
+                        <h5>Example</h5>
+                        <pre>
+var HTMLChanger = (function() {
+  var contents = 'contents'
+
+  var changeHTML = function() {
+    var element = document.getElementById('attribute-to-change');
+    element.innerHTML = contents;
+  }
+
+  return {
+    callChangeHTML: function() {
+      changeHTML();
+      console.log(contents);
+    }
+  };
+
+})();
+
+HTMLChanger.callChangeHTML();       // Outputs: 'contents'
+console.log(HTMLChanger.contents);  // undefined
+                        </pre>
+                        <h4>Prototype Design Pattern</h4>
+                        <ul>
+                            <li>The Prototype design pattern relies on the JavaScript prototypical inheritance</li>
+                            <li>used mainly for creating objects in performance-intensive situations, like <b>data base operations</b></li>
+                        </ul>
+                        <pre>
+var TeslaModelS = function() {
+  this.numWheels    = 4;
+  this.manufacturer = 'Tesla';
+  this.make         = 'Model S';
+};
+
+TeslaModelS.prototype.go = function() {
+  console.log("Rotate " + this.numWheels + " wheels");
+};
+
+TeslaModelS.prototype.stop = function() {
+  console.log("stop");
+};
+
+var teslaObj = new TeslaModelS();
+testlaObj.go();
+testlaObj.stop();
+                        </pre>
+                        <h4>Singleton Design Pattern</h4>
+                        <ul>
+                            <li>A Singleton only allows for a single instantiation</li>
+                            <li>The Singleton restricts clients from creating multiple objects</li>
+                        </ul>
+                        <pre>
+var Sun = {
+    publicEmitLight:function() {// do something to emit light
+        console.log("Public Method");
+    },
+    mass: 10000
+};                        </pre>
+<!--
+                        <h4>Observer Design Pattern</h4>
+                        <ul>
+                            <li>When one part of the application changes, other parts needs to be updated</li>
+                            <li>If an object is modified it broadcasts to dependent objects that a change has occurred.</li>
+                        </ul>
+                        <pre>
+
+var Subject = function() {
+  this.observers = [];
+
+  return {
+    subscribeObserver: function(observer) {
+      this.observers.push(observer);
+    },
+    unsubscribeObserver: function(observer) {
+      var index = this.observers.indexOf(observer);
+      if(index > -1) {
+        this.observers.splice(index, 1);
+      }
+    },
+    notifyObserver: function(observer) {
+      var index = this.observers.indexOf(observer);
+      if(index > -1) {
+        this.observers[index].notify(index);
+      }
+    },
+    notifyAllObservers: function() {
+      for(var i = 0; i < this.observers.length; i++){
+        this.observers[i].notify(i);
+      };
+    }
+  };
+};
+
+var Observer = function() {
+  return {
+    notify: function(index) {
+      console.log("Observer " + index + " is notified!");
+    }
+  }
+}
+
+var subject = new Subject();
+
+var observer1 = new Observer();
+var observer2 = new Observer();
+var observer3 = new Observer();
+var observer4 = new Observer();
+
+subject.subscribeObserver(observer1);
+subject.subscribeObserver(observer2);
+subject.subscribeObserver(observer3);
+subject.subscribeObserver(observer4);
+
+subject.notifyObserver(observer2); // Observer 2 is notified!
+
+subject.notifyAllObservers();
+// Observer 1 is notified!
+// Observer 2 is notified!
+// Observer 3 is notified!
+// Observer 4 is notified!
+                        </pre>
+                        <!-->
+                    </div>
+                    <div class="col-lg-12 chapter" id="ajax">
+                        <h3>AJAX - Asynchronous JavaScript and XML</h3>
+                        <ul>
+<li>Update a web page without reloading the page</li>
+<li>Request data from a server - after the page has loaded </li>
+<li>Receive data from a server - after the page has loaded</li>
+<li>Send data to a server - in the background</li>
+                
+                        </ul>
+                        <pre>
+//With Native JavaScript                            
+function loadXMLDoc() {
+    var xmlhttp;
+
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+           if(xmlhttp.status == 200){
+               document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+           }
+           else if(xmlhttp.status == 400) {
+              alert('There was an error 400')
+           }
+           else {
+               alert('something else other than 200 was returned')
+           }
+        }
+    }
+
+    xmlhttp.open("GET", "ajax_info.txt", true);
+    xmlhttp.send();
+}
+
+//With jQuery
+$.ajax({
+    url: "test.html",
+    context: document.body,
+    success: function(){
+      $(this).addClass("done");
+    }
+});
+                        </pre>
+                    </div>
+                    <div class="col-lg-12 chapter" id="references">
+                        <h3>References</h3>
+                        <ul>
+                            <li><a href="http://www.crockford.com/javascript/javascript.html" _target="blank">The World's Most Misunderstood Programming Language</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" _target="blank">Re-Introduction to JavaScript</a></li>
+                            <li><a href="http://www.amazon.com/exec/obidos/ASIN/0596101996/wrrrldwideweb" _target="blank">JavaScript: The Definitive Guide (5th Edition) by David Flanagan.<a/></li>
+                            <li><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/index.html" _target="blank">JavaScript design patterns<a/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    	$(".chapter").hide();
+    	var chapterId = window.location.hash;
+    	if (chapterId) {
+            $(chapterId).show();
+            $('a[href="' + chapterId + '"]').addClass("active");
+        } else {
+            $('#introduction').show();
+            $('a[href="#introduction"]').addClass("active");
+        }
+		$('ul').click(function(e) {
+            $('a').removeClass("active");
+		    if ($(e.target).is('a') ) {
+		    	var domElt = $(e.target).attr("href");
+                $(e.target).addClass("active");
+		        $(".chapter").hide();
+				$(domElt).show();
+		    }
+		});
+        
+        var buttonObj = document.getElementById('test');
+        buttonObj.onclick = function () {
+            alert("Hi Folks! You clicked me!");
+        };
+        alert("Look at me! I am not blocked by the previous call back function!");
+        document.getElementById("clickMe").onclick = function (event) {
+            console.log(event.target);
+          alert("Click Event is handled via JavaScript");
+        };
+        function handleClick () {
+            alert("I am clicked now");
+        }
+        document.getElementById("clickMeBtn").addEventListener("click", handleClick, false);
+    </script>
+</body>
+</html>

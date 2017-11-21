@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.098004">
+<testcase classname="Serve coffee" name="Buy last coffee" time="0.098004">
+<system-out><![CDATA[Given there are 1 coffees left in the machine...............................passed
+And I have deposited 1$.....................................................passed
+When I press the coffee button..............................................passed
+Then I should be served a coffee............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
